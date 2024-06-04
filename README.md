@@ -52,4 +52,7 @@ All animations share the following properties:
   - **start**: Defines the start position of the trigger (when the top of the trigger element is at 60% of the viewport height).
   - **end**: Defines the end position of the trigger (when the top of the trigger element is at 30% of the viewport height).
   - **scrub**: Synchronizes the animation with the scroll position (set to 2 seconds).
-
+=============================================================================================================
+### **Locomotive Js** 
+-https://locomotivemtl.github.io/locomotive-scroll/
+-Locomotive Scroll is a JavaScript library that creates smooth scrolling effects on web pages. It enables programmers to produce visual effects where different elements on a page scroll at different rates to give the impression of depth and dimension. 
