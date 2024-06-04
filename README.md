@@ -24,4 +24,4 @@ This example demonstrates a sequence of animations using GSAP (GreenSock Animati
 - Duration: 0.5 seconds.
 - Stagger: 0.5 seconds.
 
-![Insert an image here](image.png)
+![Insert an image here](Gsap_basics/image.png)
