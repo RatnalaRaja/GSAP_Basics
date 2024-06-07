@@ -66,3 +66,60 @@ const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
 });
+```
+=============================================================================================
+
+# Text Splitter and Animation
+
+```javascript
+function textsplitter() {
+            var allelements = document.querySelectorAll("#page2 h1");
+            
+            allelements.forEach(function(allelement) {
+                var h1text = allelement.textContent;
+                var splitter = h1text.split("");
+                var clut = "";
+                splitter.forEach(function(e) {
+                    clut += `<span>${e}</span>`;
+                });
+                allelement.innerHTML = clut;
+            });
+        }
+
+        function gsapAni() {
+            gsap.to("#page2 h1 span", {
+                color: "#e3e3c4",
+                stagger: 0.1,
+                scrollTrigger: {
+                    trigger: "#page2 h1",
+                    scroller: "#main",
+                    start: "top 50%",
+                    end: "top -10%",
+                    scrub: 2,
+                }
+            });
+        }
+```
+
+## JavaScript Functions
+
+### `textsplitter` Function
+
+- **Purpose:** The `textsplitter` function splits the text content of each `<h1>` inside `#page2` into individual characters and wraps each character in a `<span>` tag.
+- **Process:**
+  1. Select all `<h1>` elements inside `#page2` using `document.querySelectorAll`.
+  2. Iterate over each selected `<h1>` element.
+  3. Get the text content of the `<h1>` element.
+  4. Split the text content into an array of individual characters.
+  5. Wrap each character in a `<span>` tag.
+  6. Replace the original text content of the `<h1>` element with the new HTML containing the wrapped characters.
+
+### `gsapAni` Function
+
+- **Purpose:** The `gsapAni` function uses GSAP to animate the color of the characters inside `<span>` tags when they come into view while scrolling.
+- **Process:**
+  1. Use GSAP's `gsap.to` method to target all `<span>` elements inside `<h1>` tags within `#page2`.
+  2. Change the color of each `<span>` to `#e3e3c4`.
+  3. Apply a stagger effect to the animation, so each character animates with a slight delay.
+  4. Use ScrollTrigger to animate the characters based on the scroll position, with settings to control the animation's start, end, and scrubbing behavior.
+============================================================================ 
